@@ -1,0 +1,142 @@
+.success-page{
+  background-color: #CE2829;
+  min-height: 100vh;
+  padding: 48px 20px 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.success-content{
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+  color: #FAF7F2;
+}
+
+.success-logo{
+  margin: 0 0 24px 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #FAF7F2;
+}
+
+.success-top-text{
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  color: #FDC913;
+  font-style: italic;
+}
+
+.success-title{
+  margin: 0;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #FAF7F2;
+}
+
+.success-line{
+  width: 100%;
+  max-width: 520px;
+  margin: 32px auto 24px;
+  border-top: 1px solid rgba(250, 247, 242, 0.8);
+}
+
+.success-product-name{
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FAF7F2;
+}
+
+.success-details{
+  max-width: 320px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.success-details p{
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FAF7F2;
+}
+
+.success-summary-card{
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid #FAF7F2;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.success-summary-card h3{
+  margin: 0 0 24px 0;
+  font-size: 22px;
+  color: #FAF7F2;
+}
+
+.success-summary-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.success-summary-row span{
+  font-size: 18px;
+  font-weight: 600;
+  color: #FAF7F2;
+}
+
+.success-actions{
+  text-align: center;
+  margin-top: 32px;
+}
+
+.success-actions a{
+  display: inline-block;
+  padding: 12px 24px;
+  color: #FAF7F2;
+  border: 1px solid #FAF7F2;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.success-actions a:hover{
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px){
+  .success-page{
+    padding: 32px 16px 80px;
+  }
+
+  .success-logo{
+    font-size: 36px;
+  }
+
+  .success-top-text{
+    font-size: 22px;
+  }
+
+  .success-title{
+    font-size: 48px;
+  }
+
+  .success-product-name{
+    font-size: 20px;
+  }
+
+  .success-summary-card{
+    padding: 24px;
+  }
+
+  .success-summary-row span{
+    font-size: 16px;
+  }
+}

@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import workintech from '/workintech.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import OrderPage from './Pages/OrderPage';
+import SuccessPage from './Pages/SuccessPage';
+import HomePage from './Pages/HomePage';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [order, setOrder] = useState({
+    name: '',
+    size: '',
+    dough: '',
+    toppings: [],
+    note: '',
+    quantity: 1,
+  });
+
+  const [orderResponse, setOrderResponse] = useState(null);
 
   return (
-    <>
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s7-challenge-pizza" target="_blank">
-          <img src={workintech} className="logo" alt="Workintech logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Workintech + 🍕</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Absolute Acı Pizza sayısı {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Workintech or Pizza logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+
+        <Route path="/order">
+          <OrderPage
+            order={order}
+            setOrder={setOrder}
+            setOrderResponse={setOrderResponse}
+          />
+        </Route>
+
+        <Route path="/success">
+          <SuccessPage orderResponse={orderResponse} order={order} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
